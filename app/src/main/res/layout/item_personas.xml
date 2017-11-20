@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding_8dp">
+
+    <ImageView
+        android:id="@+id/imgList"
+        android:layout_width="@dimen/size_40dp"
+        android:layout_height="@dimen/size_40dp"
+        android:src="@drawable/melgibson"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/lblList"
+        android:layout_toRightOf="@+id/imgList"
+        style="@style/MisTextViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/padding_8dp"
+        android:text="Mel Gibson"
+        android:textColor="#000"/>
+
+</RelativeLayout>

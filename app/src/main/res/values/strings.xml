@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">PassportProject</string>
+    <string name="pasaporte">My Passport</string>
+    <string name="name">Name:</string>
+    <string name="nameHint">Write here your name</string>
+    <string name="apellido">Surname:</string>
+    <string name="apellidoHint">Write here your surname</string>
+
+    <string name="ironMan">Iron Man</string>
+    <string name="stark" translatable="false">Stark</string>
+    <string name="melGibson" translatable="false">Mel Gibson</string>
+    <string name="borracho">Borracho</string>
+
+    <string-array name="spinnerItems">
+        <item>@string/ironMan</item>
+        <item>@string/melGibson</item>
+        <item>@string/stark</item>
+        <item>@string/borracho</item>
+    </string-array>
+
+
+    <string name="superHero">Super hero</string>
+    <string name="accept">Save</string>
+    <string name="apply">Apply</string>
+    <string name="cancel">Cancel</string>
+    <string name="load">Load</string>
+    <string name="delete">Delete</string>
+</resources>

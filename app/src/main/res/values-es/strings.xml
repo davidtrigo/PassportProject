@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PassportProject</string>
+    <string name="pasaporte">Mi Pasaporte</string>
+    <string name="name">Nombre:</string>
+    <string name="nameHint">Escribe aquí tu nombre</string>
+    <string name="apellido">Apellidos</string>
+    <string name="apellidoHint">Escribe aquí tus apellidos</string>
+    <string name="ironMan">Hombre de Hierro</string>
+    <string name="borracho">Drunk</string>
+    <string name="superHero">Súper Héroe</string>
+    <string name="accept">Guardar</string>
+    <string name="apply">Aplicar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="load">Cargar</string>
+    <string name="delete">Eliminar</string>
+</resources>

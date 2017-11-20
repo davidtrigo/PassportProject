@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gris_fondo">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footerTab">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/padding_8dp"
+            android:paddingLeft="@dimen/padding_8dp"
+            android:paddingRight="@dimen/padding_8dp"
+            android:paddingTop="@dimen/padding_16dp">
+
+            <LinearLayout
+                android:id="@+id/conentedorFotos"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:background="@color/blanco"
+                android:gravity="center"
+                android:padding="@dimen/padding_8dp">
+
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/alto_foto"
+                    android:layout_marginLeft="@dimen/padding_4dp"
+                    android:layout_marginRight="@dimen/padding_4dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/melgibson" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/alto_foto"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ironman" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_4dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:padding="@dimen/padding_8dp">
+
+                <TextView
+                    android:id="@+id/lblTitulo"
+                    style="@style/MisTextViewStyle"
+                    android:gravity="center"
+                    android:text="@string/pasaporte"
+                    android:textSize="@dimen/text_20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/lblNombre"
+                    style="@style/MisTextViewStyleFormulario"
+                    android:layout_width="@dimen/size_80dp"
+                    android:layout_below="@+id/lblTitulo"
+                    android:text="@string/name" />
+
+                <EditText
+                    android:id="@+id/txtNombre"
+                    style="@style/MisTextViewStyleFormulario"
+                    android:layout_below="@+id/lblTitulo"
+                    android:layout_toRightOf="@+id/lblNombre"
+                    android:hint="@string/nameHint" />
+
+                <TextView
+                    android:id="@+id/lblApellido"
+                    style="@style/MisTextViewStyleFormulario"
+                    android:layout_width="@dimen/size_80dp"
+                    android:layout_below="@+id/lblNombre"
+                    android:text="@string/apellido" />
+
+                <EditText
+                    android:id="@+id/txtApellido"
+                    style="@style/MisTextViewStyleFormulario"
+                    android:layout_below="@+id/lblNombre"
+                    android:layout_toRightOf="@+id/lblApellido"
+                    android:hint="@string/apellidoHint" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lblApellido">
+
+                    <Spinner
+                        android:id="@+id/spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/spinnerItems">
+
+                    </Spinner>
+
+                    <CheckBox
+                        android:id="@+id/cbSuperHero"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/superHero" />
+
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/footerTab"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_4dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_selector"
+            android:text="@string/accept" />
+
+        <Button
+            android:id="@+id/btnLoad"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/padding_4dp"
+            android:layout_marginTop="@dimen/padding_4dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_selector"
+            android:text="@string/apply" />
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_4dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_selector"
+            android:text="@string/cancel" />
+
+    </LinearLayout>
+
+</RelativeLayout>
