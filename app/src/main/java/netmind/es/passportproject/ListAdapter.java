@@ -17,11 +17,11 @@ import java.util.ArrayList;
 
 public class ListAdapter extends BaseAdapter {
 
-    private ArrayList<Persona> arrayListPersonas;
+    private ArrayList<Persona> arrayList;
     private Context context;
 
     public ListAdapter(ArrayList<Persona> arrayList, Context context) {
-        this.arrayListPersonas = arrayList;
+        this.arrayList = arrayList;
         this.context = context;
     }
 
@@ -37,21 +37,22 @@ public class ListAdapter extends BaseAdapter {
     @Override
     public int getCount() {
 
-        Log.d(ListAdapter.class.getSimpleName(), "getCount= " + arrayListPersonas.size());
-        return arrayListPersonas.size();
+        Log.d(ListAdapter.class.getSimpleName(), "getCount= " + arrayList.size());
+        return arrayList.size();
     }
 
     //return an element from the list
     @Override
     public Object getItem(int position) {
-        return arrayListPersonas.get(position);
+        return arrayList.get(position);
+
     }
 
 
     // devuelve elemento id del listado
     @Override
     public long getItemId(int position) {
-        return arrayListPersonas.get(position).getId();
+        return arrayList.get(position).getId();
     }
 
     // dibuja en lista el elemento
@@ -82,7 +83,7 @@ public class ListAdapter extends BaseAdapter {
         }
 
 
-        Persona persona = arrayListPersonas.get(position);
+        Persona persona = arrayList.get(position);
         viewHolder.lblList.setText(persona.getName());
         viewHolder.imageList.setImageResource(persona.getImageFront());
 

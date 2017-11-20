@@ -1,10 +1,12 @@
 package netmind.es.passportproject;
 
+import java.io.Serializable;
+
 /**
  * Created by A8Alumno on 20/11/2017.
  */
 
-public class Persona {
+public class Persona implements Serializable{
 
     private int id;
     private  String name;

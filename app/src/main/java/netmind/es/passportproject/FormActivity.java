@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 
 public class FormActivity extends AppCompatActivity implements View.OnClickListener {
@@ -27,6 +28,7 @@ public class FormActivity extends AppCompatActivity implements View.OnClickListe
     private Spinner spinner;
     private CheckBox cbSuperHero;
     private Button btnSave, btnLoad, btnDelete;
+    private ImageView imgFotoFrente, imgFotoPerfil;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,7 @@ public class FormActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         initLayout();
+        loadPersona();
     }
 
     private void initLayout() {
@@ -42,6 +45,8 @@ public class FormActivity extends AppCompatActivity implements View.OnClickListe
         txtApellido = findViewById(R.id.txtApellido);
         spinner = findViewById(R.id.spinner);
         cbSuperHero = findViewById(R.id.cbSuperHero);
+        imgFotoFrente = findViewById(R.id.imgFotoFrente);
+        imgFotoPerfil = findViewById(R.id.imgFotoPerfil);
 
         btnSave = findViewById(R.id.btnSave);
         btnLoad = findViewById(R.id.btnLoad);
@@ -49,6 +54,26 @@ public class FormActivity extends AppCompatActivity implements View.OnClickListe
         btnSave.setOnClickListener(this);
         btnLoad.setOnClickListener(this);
         btnDelete.setOnClickListener(this);
+    }
+
+
+    private void loadPersona(){
+
+        if(getIntent().getExtras()!= null && getIntent().getExtras().containsKey("persona")){
+
+            Persona persona = (Persona) getIntent().getExtras().getSerializable("persona");
+
+            txtNombre.setText(persona.getName());
+            txtApellido.setText(persona.getSurname());
+            spinner.setSelection(persona.getSpinnerPosition());
+            cbSuperHero.setChecked(persona.isCheckboxState());
+            imgFotoFrente.setImageResource(persona.getImageFront());
+            imgFotoPerfil.setImageResource(persona.getImagePerfil());
+
+
+        }
+
+
     }
 
     private void clearLayout() {
@@ -97,6 +122,7 @@ public class FormActivity extends AppCompatActivity implements View.OnClickListe
         apellidos = sharedPreferences.getString("txtApellido", "");
         spinnerSelection = sharedPreferences.getInt("spinner", 0);
         checkBoxState = sharedPreferences.getBoolean("cbSuperHero", false);
+
 
         initLayoutData();
     }
